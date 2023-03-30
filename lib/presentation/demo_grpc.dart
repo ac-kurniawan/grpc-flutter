@@ -40,11 +40,10 @@ class _DemoGrpcState extends State<DemoGrpc> {
             Text('response: $_response'),
             OutlinedButton(
                 onPressed: () async {
-                  final data = GetUsersMessageV1();
                   final client = UserServiceV1Client(channel,
                       options:
                           CallOptions(timeout: const Duration(seconds: 30)));
-
+                  final data = GetUsersMessageV1();
                   final response = await client.getUser(data);
 
                   setState(() {

@@ -14,3 +14,8 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## How to generate proto
+
+1. install `protoc_plugin` https://pub.dev/packages/protoc_plugin
+2. Run `protoc --plugin=protoc-gen-dart --dart_out=grpc:.\lib\generated --proto_path .\lib\proto .\lib\proto\*.proto`
